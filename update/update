@@ -10,7 +10,7 @@ sh_dir="./${sh_name}"
 case "$1" in
     update)
         wget ${sh_url} -O ${sh_name} \
-        && chmod +x ${sh_name} && echo "${sh_name} updated" # && ${sh_dir}
+        && chmod +x ${sh_name} && echo "${sh_name} updated"  && shift && ${sh_dir} $@
         ;;
     *)
         ;;
