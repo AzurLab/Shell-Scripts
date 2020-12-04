@@ -1,11 +1,16 @@
 #!/system/bin/sh
 # 我更新我自己
-# https://raw.githubusercontent.com/AzurLab/Azur_Shell_Scripts/main/update/update
+# https://www.github.com/AzurLab/Azur_Shell_Scripts/main/update/update
 #
+
+sh_url="https://raw.githubusercontent.com/AzurLab/Azur_Shell_Scripts/main/update/update"
+sh_name="update"
+sh_dir="./${sh_name}"
 
 case "$1" in
     update)
-        wget -q https://raw.githubusercontent.com/AzurLab/Azur_Shell_Scripts/main/update/update -O update && chmod +x update && ./update
+        wget ${sh_url} -O ${sh_name} \
+        && chmod +x ${sh_name} && echo "${sh_name} updated" && ${sh_dir}
         ;;
     *)
         ;;
