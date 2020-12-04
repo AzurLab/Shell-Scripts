@@ -1,1 +1,12 @@
+#!/system/bin/sh
+# 我更新我自己
+# https://raw.githubusercontent.com/AzurLab/Azur_Shell_Scripts/main/update/update
+#
 
+case "$1" in
+    update)
+        wget -q https://raw.githubusercontent.com/AzurLab/Azur_Shell_Scripts/main/update/update -O update && chmod +x update && ./update
+        ;;
+    *)
+        ;;
+esac
